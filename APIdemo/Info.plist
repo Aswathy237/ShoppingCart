@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <!-- App Identification -->
+    <key>CFBundleIdentifier</key>
+    <string>com.yourcompany.APIdemo</string>
+    <key>CFBundleName</key>
+    <string>APIdemo</string>
+
+    <!-- Versioning: User-visible version number -->
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    
+    <!-- Versioning: Internal build number (must be a string of digits, e.g., "1", "2", "42", etc.) -->
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    
+    <!-- App Transport Security Exceptions -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSExceptionDomains</key>
+      <dict>
+        <key>fakestoreapi.com</key>
+        <dict>
+            <key>NSAppTransportSecurity</key>
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <true/>
+            </dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+          <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+          <key>NSTemporaryExceptionMinimumTLSVersion</key>
+          <string>TLSv1.2</string>
+        </dict>
+      </dict>
+    </dict>
+    
+  </dict>
+</plist>
